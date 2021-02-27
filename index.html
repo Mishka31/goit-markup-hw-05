@@ -43,7 +43,7 @@
         <section class="hero-background">
             <div class="container landscrape">
                 <h1 class="text-hero">Эффективные решения для вашего бизнеса</h1> 
-                <button class="btn-hero" type="button">Заказать услугу</button>
+                <button class="btn-hero" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <section class="blocks-of-competence">
@@ -347,5 +347,16 @@
                 </div>
         </div>
     </footer>
+    <div>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close-btn" data-modal-close>
+                    <svg class="close-btn-svg">
+                        <use href="./sprite.svg#icon-btn-close"></use></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body> 
 </html>
