@@ -64,19 +64,29 @@ a {
 }
 .navigation-list {
   display: flex;
-  margin-left: 93px;
+  /* margin-left: 93px; */
   padding: 0px;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  padding-left: 93px;
+  padding-top: 32px;
+  /* margin-top: 32px; */
+  margin: 0px;
+}
+.navigation-item {
+  position: relative;
+  padding-bottom: 32px;
 }
 .navigation-item-middle {
+  position: relative;
   margin-left: 50px;
   margin-right: 50px;
-  /* padding-bottom: 32px; */
+  padding-bottom: 32px;
 }
 .navigation-link {
   color: var(--mostly-used-color);
   transition: color 250ms var(--time-cubic);
+}
+.blue-studio {
+  color: var(--navigation-link-focus);
 }
 .navigation-link:hover,
 .navigation-link:focus {
@@ -712,13 +722,12 @@ a {
   pointer-events: none;
 }
 .current::after {
-  position: relative;
+  position: absolute;
   left: 0;
   bottom: 0;
 
   content: "";
   display: block;
-
   width: 100%;
   height: 4px;
   background-color: var(--navigation-link-focus);
