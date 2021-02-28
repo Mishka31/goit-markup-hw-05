@@ -18,6 +18,7 @@ html {
   --paragraph-text: #757575;
   --claer-white: #ffffff;
   --img-color: #afb1b8;
+  --time-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -71,9 +72,11 @@ a {
 .navigation-item-middle {
   margin-left: 50px;
   margin-right: 50px;
+  /* padding-bottom: 32px; */
 }
 .navigation-link {
   color: var(--mostly-used-color);
+  transition: color 250ms var(--time-cubic);
 }
 .navigation-link:hover,
 .navigation-link:focus {
@@ -85,6 +88,7 @@ a {
   display: flex;
   margin-top: 32px;
   margin-bottom: 32px;
+  transition: color 250ms var(--time-cubic);
 }
 .mail-link-header {
   font-weight: 500;
@@ -93,6 +97,7 @@ a {
   letter-spacing: 0.02em;
   color: var(--links-header);
   fill: var(--links-header);
+  transition: color 250ms var(--time-cubic);
 }
 .phone-link-header {
   font-weight: 500;
@@ -102,6 +107,7 @@ a {
   color: var(--links-header);
   margin-left: 50px;
   fill: var(--links-header);
+  transition: color 250ms var(--time-cubic);
 }
 .phone-link-header:hover,
 .phone-link-header:focus {
@@ -263,6 +269,7 @@ a {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms var(--time-cubic);
 }
 .mail-link-footer:hover,
 .mail-link-footer:focus {
@@ -324,6 +331,7 @@ a {
 
   background: #f5f4fa;
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-nav-portfolio:hover,
 .btn-nav-portfolio:focus {
@@ -358,13 +366,6 @@ a {
   display: flex;
   justify-content: space-between;
 }
-/* .footer-container {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 60px 15px;
-  height: 252px;
-  width: 1200px;
-} */
 .mail-container {
   margin-top: 9px;
 }
@@ -434,6 +435,7 @@ a {
   margin-bottom: 30px;
   flex-wrap: wrap;
   box-sizing: border-box;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tex-of-cerds-container {
   margin: 0px;
@@ -466,8 +468,9 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-.item-svg-mail {
+.item-svg-mail-tel {
   margin-right: 10px;
+  transition: fill 250ms var(--time-cubic);
 }
 .mail-link-header {
   display: flex;
@@ -496,6 +499,7 @@ a {
   width: 20px;
   height: 20px;
   fill: var(--img-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-links {
   /* margin: 0px;*/
@@ -509,6 +513,7 @@ a {
 }
 .social-links-items {
   margin-right: 10px;
+  /* transition:  250ms var(--time-cubic); */
 }
 .links-svg {
   display: block;
@@ -520,6 +525,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .links-svg:hover,
 .links-svg:focus {
@@ -539,10 +545,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .border-for-logo-clients:hover,
 .border-for-logo-clients:focus {
   border: 1px solid var(--navigation-link-focus);
+}
+.clients-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-svg-clients {
   fill: var(--img-color);
@@ -605,6 +615,7 @@ a {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer .container {
   display: flex;
@@ -614,6 +625,7 @@ a {
   width: 20px;
   height: 20px;
   fill: var(--claer-white);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join-links-svg:hover,
 .join-links-svg:focus {
@@ -651,7 +663,7 @@ a {
   padding-right: 24px;
   padding-top: 63px;
   padding-bottom: 63px;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms linear;
 }
 .hover-focus-for-cards:hover .overlay,
@@ -665,6 +677,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: all 250ms linear;
 }
 .modal {
   position: absolute;
@@ -697,4 +710,17 @@ a {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.current::after {
+  position: relative;
+  left: 0;
+  bottom: 0;
+
+  content: "";
+  display: block;
+
+  width: 100%;
+  height: 4px;
+  background-color: var(--navigation-link-focus);
+  border-radius: 2px;
 }
