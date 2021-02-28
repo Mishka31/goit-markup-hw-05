@@ -733,3 +733,55 @@ a {
   background-color: var(--navigation-link-focus);
   border-radius: 2px;
 }
+.order-form {
+  width: 448px;
+  margin: 0 auto;
+}
+.title-order-form {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0px;
+  margin-top: 40px;
+
+  color: #212121;
+}
+.order-form-input {
+  width: 100%;
+  height: 43px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 15px;
+}
+.input-name {
+  margin-top: 30px;
+}
+.input-phone {
+  margin-top: 28px;
+}
+.input-mail {
+  margin-top: 28px;
+}
+.input-comments {
+  margin-top: 28px;
+  height: 120px;
+  resize: none;
+}
+.order-form-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.order-form-btn {
+  /* position: absolute; */
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  background: var(--navigation-link-focus);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--claer-white);
+}
